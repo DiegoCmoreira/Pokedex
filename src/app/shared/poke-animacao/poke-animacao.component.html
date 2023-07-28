@@ -1,0 +1,23 @@
+<div class="pokeDiv">
+    <button class="btnOpenPoke" (click)="abrirPokedex()">
+        <img src="assets/logo.svg" alt="logo Pokedex">
+    </button>
+    
+    <img 
+        src="assets/pokedexCima1.png" 
+        alt="pokedex" 
+        class="pokeTopo" 
+        [ngClass]="{ 'aberto':isOpen }" 
+    />
+    
+    <main *ngIf="toSee">
+        <poke-list></poke-list>
+    </main>
+
+    <img 
+        src="assets/pokedexBaixa2.png" 
+        alt="pokedex" 
+        class="pokeBaixo" 
+        [ngClass]="{ 'aberto':isOpen }" 
+    />
+</div>
